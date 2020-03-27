@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Book title: {{object.title}}</h1>
+<p>Need to add Author, edition
+<!--
+{% if object.description != None and object.description != '' %}
+{{object.description}}
+{% else %}
+Description not 
+{% endif %}
+-->
+</p>
+
+<p>ISBN: {{ object.isbn }}</p>
+<p>COURSES: {{ object.courses }}</p>
+
+{{object.price}}
+{% endblock %}

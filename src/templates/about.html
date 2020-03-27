@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>About </h1>
+    <p>paragraph information</p>
+
+<p>
+{{my_text|upper}}, {{my_number}}, {{my_list}} 
+</p>
+
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+
+<ul>
+{% for abc in my_list %}
+    {% if abc == 22 %}
+        <li>{{forloop.counter}} - {{ abc|add:22 }}</li>
+    {% elif abc == "dca" %}
+        <li>nan</li>
+    {% else %}
+        <li>{{forloop.counter}} - {{ abc }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}
